@@ -122,7 +122,7 @@ let getAllDetailslg = () =>{
 	        type: 'GET',
 	        dataType: 'json',
 	        async: true,
-	        url: 'http://www.omdbapi.com/?i=tt3896198&apikey=3f0e323e',
+	        url: 'https://www.omdbapi.com/?i=tt3896198&apikey=3f0e323e',
 
 	       
 	       /* $("#tags").inputSearch({
