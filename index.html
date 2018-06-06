@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+<!-- ********button********** -->
+
+<title>jQuery UI Autocomplete - Default functionality</title>
+<link rel="stylesheet"
+	href="css/jquery-ui.css">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+	crossorigin="anonymous">
+	
+	
+
+
+<link rel="stylesheet" href="index.css">
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script src="js/picturehover.js"></script>
+
+
+<script
+	src="js/loadingoverlay.min.js"></script>
+
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="indexlg.js"></script>
+<script type="text/javascript" src="indexmd.js"></script>
+<script type="text/javascript" src="indexex.js"></script>
+
+<!-- for the cross in the box  -->
+
+
+
+<script
+	src="js/jquery.inputsearch.js"></script>
+
+</head>
+<body>
+	<div class="container">
+	
+		<div class="row row1">
+			<nav class="navbar navbar-dark bg-primary">
+				<a class="navbar-brand"><b>Movie Search Mania</b></a>
+			</nav>
+		</div>
+		
+		<div class="background">
+		  <div class="row ui-widget blur">
+			<div class="col  d-none d-xl-block center">
+            
+				<label for="tags"><b>Name of Movie </b></label> <input id="tags"
+					placeholder="Search">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label
+					for="tags"><b>Year</b>&nbsp;</label><input id="tags1" placeholder="Search">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<label for="tags"><b>ImdbId</b></label> <input id="tags2"
+					placeholder="Search"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<button class="ui-button ui-widget ui-corner-all btn btn-outline-primary"" id="button">Search</button>
+			</div>
+			
+			
+			
+		 <div class="col d-none d-lg-block d-xl-none center1">
+
+				<label for="tags">Name of Movie </label> <input id="tagslg"
+					placeholder="Search">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<label
+					for="tags">Year </label><input id="tags1lg" placeholder="Search">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<label for="tags">ImdbId</label> <input id="tags2lg"
+					placeholder="Search"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<button class="ui-button ui-widget ui-corner-all" id="buttonlg">Search</button>
+			</div>	
+			
+			<div class="col d-none d-sm-block d-md-block d-lg-none center1  containermd">
+			<table>
+			 <tr>
+			  <td>
+			 
+				<label for="tags">Name of Movie </label>
+			  </td>
+			  <td>
+			       <input id="tagsmd"
+					placeholder="Search">
+				</td>	
+			 </tr>
+			 
+			 <tr>	
+			  <td>	
+			   <br/>
+					<label for="tags">Year </label></td>
+					<td><input id="tags1md" placeholder="Search">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				   </td>
+			 </tr>	
+			 <tr>
+			  <td>
+			  <br/>
+				<label for="tags">ImdbId</label></td>
+				<td> <input id="tags2md"
+					placeholder="Search"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</td>
+					
+			<tr>
+			<td></td>
+			 <td>		
+				<button class="ui-button ui-widget ui-corner-all" id="buttonmd">Search</button>
+				</td>
+				</tr>
+				</table>
+			</div>	
+			
+			<!-- *************extra small*********************----------- -->
+			
+			<div class="col d-block d-sm-none center1  containermd1">
+			<table>
+			 <tr>
+			  <td>
+			 
+				<label for="tags">Name of Movie </label>
+			  </td>
+			  <td>
+			       <input id="tagsex"
+					placeholder="Search">
+				</td>	
+			 </tr>
+			 
+			 <tr>	
+			  <td>	
+			   <br/>
+					<label for="tags">Year </label></td>
+					<td><input id="tags1ex" placeholder="Search">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				   </td>
+			 </tr>	
+			 <tr>
+			  <td>
+			  <br/>
+				<label for="tags">ImdbId</label></td>
+				<td> <input id="tags2ex"
+					placeholder="Search"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				</td>
+					
+			<tr>
+			<td></td>
+			 <td>		
+				<button class="ui-button ui-widget ui-corner-all" id="buttonex">Search</button>
+				</td>
+				</tr>
+				</table>
+			</div>	
+			
+			
+			
+			
+			
+			</div>
+        </div>
+        
+        
+		<br /> <br />
+		
+		<!-- *********visble in the xl and lg***********************------------- -->
+		
+		<div class="row rowwidth d-none  d-lg-block boarder ">
+		<div class="boarderleft">
+		<b style="font-style: italic;">Your Search Results</b>
+		</div>
+         <div class="col-6 marginxl">
+			<div class="card display" style="width: 15rem;">
+				<img class="card-img-top align-self-start mr-3" id="card-img-top" src="" alt="Card image cap">
+				
+				<div class="card-body">
+					<h5 class="card-title" id="card-title">card title</h5>
+					<div class="remove">
+					<p class="card-text font" id="card-text"></p>
+					  <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">more info</a>
+					
+					 <div class="collapse multi-collapse" id="multiCollapseExample1">
+                       <div class="card card-body font1">
+                           
+                       </div>
+                     </div>
+                    
+                     </div>
+				</div>
+			</div>
+         </div>
+         
+         
+         
+		
+		 </div>
+		<br/><br/>
+		
+		
+		<!-- ******************extra details*********************** -->
+		  <div class="row rowwidth  boarder ">
+		 <div class="col-4 col-lg-4 d-none d-xl-block">
+		<div class="boarderleft">
+		<b style="font-style: italic;">Outher Recomended movies</b>
+		</div>
+	 <div data-picturehover>
+             <img src="thumb.jpg" alt="Avengers:infinity war" title="Avengers :">
+     </div> 
+
+		 </div>
+		 <!-- ******************************************* -->
+		 <div class="col-4 col-lg-4 d-none d-lg-block d-xl-none">
+		<div class="boarderleft">
+		<b style="font-style: italic;">Outher Recomended movies</b>
+		</div>
+	 <div data-picturehover>
+             <img src="thumb.jpg" alt="Avengers:infinity war" title="Avengers :" height="20%" width="100%">
+     </div> 
+
+		 </div>
+		 
+		 
+		 <div class="col-4 col-lg-4 margin11 d-none d-xl-block">
+		<div class="boarderleft">
+		<b style="font-style: italic;"></b>
+		</div>
+	 <div data-picturehover >
+             <img src="justiceleague.jpg" alt="justiceleague" title="justiceleague" height="40%" width="100%">
+     </div> 
+
+		 </div>
+		 
+		 <!-- ****************************************************** -->
+		 
+		  <div class="col-4 col-lg-4 margin11 d-none d-lg-block d-xl-none">
+		<div class="boarderleft">
+		<b style="font-style: italic;"></b>
+		</div>
+	 <div data-picturehover >
+             <img src="justiceleague.jpg" alt="justiceleague" title="justiceleague" height="40%" width="100%">
+     </div> 
+
+		 </div>
+		 
+		 
+		 
+		 <div class="col-4 col-lg-4 margin11 d-none d-xl-block">
+		<div class="boarderleft">
+		<b style="font-style: italic;"></b>
+		</div>
+	 <div data-picturehover>
+             <img src="cable.jpg" alt="DeadPool2" title="DeadPool2 " height="40%" width="100%">
+     </div> 
+
+		 </div>
+		 
+		 
+		 <!-- -************************* -->
+		 
+		 <div class="col-4 col-lg-4 margin11 d-none d-lg-block d-xl-none">
+		<div class="boarderleft">
+		<b style="font-style: italic;"></b>
+		</div>
+	 <div data-picturehover>
+             <img src="cable.jpg" alt="DeadPool2" title="DeadPool2 " height="40%" width="100%">
+     </div> 
+
+		 </div>
+		 
+		 
+		 
+		 </div>
+		 
+		
+         
+		 
+		
+		
+		
+		<!-- *****************visible in the sm to md***********-------------- -->
+		
+		<div class="row rowwidth d-none d-sm-block  d-md-block d-lg-none  boarder">
+		 <div class="boarderleft">
+		<b style="font-style: italic;">Your Search Results</b>
+		</div>
+          <div class="margin">
+			<div class="card display imghover" style="width: 15rem;">
+				<img class="card-img-top" src="" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">Card title</h5>
+					<div class="remove">
+					<p class="card-text font">Some quick example text to build on
+						the card title and make up the bulk of the card's content.</p>
+					    <a class="btn btn-primary" data-toggle="collapse" href="#multiCollapseExample2" role="button" aria-expanded="false" aria-controls="multiCollapseExample2">more info</a>
+					 <div class="collapse multi-collapse" id="multiCollapseExample2">
+                       <div class="card card-body font1">
+                           
+                       </div>
+                     </div>
+                     </div>
+				</div>
+			</div>
+           </div>
+		</div>
+		
+		
+		
+		<!-- -visible in the extra small*********************--------------- -->
+		
+		<div class="row rowwidth d-block d-sm-none  boarder">
+          <div class="boarderleft">
+		<b style="font-style: italic;">Your Search Results</b>
+		</div>
+		<div class="margin1">
+			<div class="card display imghover" style="width: 13rem;">
+				<img class="card-img-top" src="" alt="Card image cap">
+				<div class="card-body">
+					<h5 class="card-title">Card title</h5>
+					<div class="remove">
+					<p class="card-text font">Some quick example text to build on
+						the card title and make up the bulk of the card's content.</p>
+					   <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#multiCollapseExample3" aria-expanded="false" aria-controls="multiCollapseExample3">more info</button> 
+					 <div class="collapse multi-collapse" id="multiCollapseExample3">
+                       <div class="card card-body font1">
+                            
+                       </div>
+                     </div>
+                     </div>
+				</div>
+			</div>
+         </div>
+		</div>
+          &copy;all rights reserved Aniket H
+
+		<!-- Content here -->
+	</div>
+
+
+
+
+	 <!--   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script> -->
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+
+
+</body>
+</html>
